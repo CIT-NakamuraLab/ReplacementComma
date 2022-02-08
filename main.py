@@ -41,11 +41,11 @@ def get_tex_file(dir_path):
 
 # Replace dokuten and kuten to comma and period
 def replace_comma(filename):
-    with open(filename, "r") as f:
+    with open(filename, "r", encoding="utf-8_sig") as f:
         lines = f.read()
     lines = lines.replace("、", "，")
     lines = lines.replace("。", "．")
-    with open(filename, "w") as f:
+    with open(filename, "w", encoding="utf-8_sig") as f:
         f.write(lines)
 
 
